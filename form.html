@@ -18,7 +18,7 @@
             <a href="types.html">TYPES</a>
             <a href="jeux.html">JEUX</a>
             <a href="manga.html">MANGA</a>
-            <a href="form.html" class="active">CONTACT</a>
+            <a href="form.html" class="active">LOGIN</a>
         </nav> 
 
         <header>
@@ -26,10 +26,26 @@
             <img src="images/poke.png" alt="image de pokeball">
         </header>
 
+        <div class="login-area">
+            <form action="/login" method="post">
+                <label> 
+                    Nom d'utilisateur:  <input type="text" id="user" name="user" required>
+                </label>
+                <label> 
+                    Mail: <input type="email" id="email" name="email" required>
+                </label>
+                
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
         <footer>
-            <strong>CONTACT</strong> <br>
-            Jacques KOZIK <br>
-            Mail: jacques.KOZIK@etu.uca.fr
+            <ul>
+                <li><strong>CONTACT</strong></li>
+                <li>Jacques KOZIK</li>
+                <li>Mail: jacques.KOZIK@etu.uca.fr</li>
+                <li><a href="https://fr.wikipedia.org/wiki/Pok%C3%A9mon" class="external-link" class="lien-externe">SOURCE</a></li>
+            </ul>
         </footer>
 
     </body>
