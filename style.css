@@ -1,3 +1,4 @@
+/*media querries*/
 
 @media (min-width: 400px) { 
   body {
@@ -9,7 +10,17 @@
   header :first-child {
     margin-left: 140px;
   }
+  body p {
+    margin-right: 520px;
+  }
+  body .login-area {
+    margin-left: 100px;
+  }
+  ul {
+    text-align: left;
+  }
 }
+
 @media (min-width: 600px) { 
   body {
     font-size: 12px;
@@ -19,6 +30,12 @@
   }
   header :first-child {
     margin-left: 170px;
+  }
+  body p {
+    margin-right: 300px;
+  }
+  body .login-area {
+    margin-left: 100px;
   }
 }
 @media (min-width: 992px) { 
@@ -34,11 +51,20 @@
   header{
     justify-content: center;
   }
+  body p {
+    margin-right: 0px;
+  }
+  body .login-area {
+    margin-left: auto;
+  }
+  ul {
+    text-align: center;
+  }
 }
 
 
 
-
+/*fonts*/
 @font-face {
   font-family: "Pokemon Hollow";
   src: url("fonts/Pokemon\ Hollow.ttf");
@@ -55,16 +81,22 @@
 }
 
 
+/* header et footer, body et p*/
 header{
-    background-color: rgb(33, 166, 255);
-    font-family: Nunito, sans-serif, Verdana;
-    padding: 20px;
-    margin: 25px 0px;
-    border-collapse: collapse;
-    letter-spacing: 1px;
-    text-align: center;
-    display: flex;
-    align-items: center; 
+  background-color: rgb(33, 166, 255);
+  font-family: Nunito, sans-serif, Verdana;
+  padding: 20px;
+  margin: 25px 0px;
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  align-items: center; 
+}
+
+header img {
+  width: 75px; 
+  height: auto;
 }
 
 footer{
@@ -100,6 +132,7 @@ p:hover {
   background-color: rgb(142, 209, 234);
 }
 
+/* h tags */
 h1{
   font-family: Pokemon Hollow, sans-serif, Verdana;
   border-collapse: collapse;
@@ -107,9 +140,6 @@ h1{
   font-size: 50px;
   text-decoration: none;
 }
-
-
-
 
 h2{
   font-family: Nunito, sans-serif, Verdana;
@@ -147,10 +177,6 @@ h2:hover, h3:hover, h4:hover {
 }
 
 
-header img {
-  width: 75px; 
-  height: auto;
-}
 
 
 
@@ -162,9 +188,7 @@ header img {
 
 
 
-
-
-
+/* nav */
 nav{
     width: 100%;
     position: fixed;
@@ -218,7 +242,7 @@ a{
 
 
 
-
+/* table */
 table {
     border-collapse: collapse;
     letter-spacing: 1px;
@@ -250,6 +274,10 @@ table {
   tbody > tr:nth-of-type(even) {
     background-color: rgb(247, 234, 176);
   }
+
+  tbody > tr:nth-of-type(even):hover {
+    background-color: rgb(243, 215, 92);
+  }
   
   tfoot th {
     text-align: right;
@@ -261,7 +289,7 @@ table {
 
 
 
-
+/* flexbox, figure et image */
   .boxtype{
     display: flex;
     flex-basis: auto;
@@ -293,7 +321,7 @@ table {
 }
 
 .boximage figure:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
   .boxtab{
@@ -396,7 +424,7 @@ img.consoleimg {
 
 
 
-
+/* formulaire */
 .login-area {
   width: 300px;
   margin: 0 auto;
