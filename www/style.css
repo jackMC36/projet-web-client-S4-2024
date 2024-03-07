@@ -31,9 +31,10 @@
     max-width: 275px;
   }
 
-  table{
+  body table{
     width: 500px;
   }
+
 }
 
 @media (min-width: 600px) { 
@@ -55,11 +56,14 @@
   body .login-area {
     margin-left: 100px;
   }
-  table {
+  body table {
     width: 700px;
   
   }
+
+
 }
+
 @media (min-width: 992px) { 
   body {
     font-size: 14px;
@@ -89,13 +93,13 @@
     flex-direction: row;
 
   }
-  
   figure {
     max-width: 275px;
   }
-  table {
+  body table {
     width: auto;
   }
+
 }
 
 
@@ -332,7 +336,6 @@ table {
     flex-wrap: wrap; 
     flex-direction: column;
     justify-content: center;
-    margin: 0px 100px;
     
     flex-grow: 1;
     flex-shrink: 1;

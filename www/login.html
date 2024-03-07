@@ -29,26 +29,14 @@
         </header>
 
         <div class="login-area">
-            <form action="/signup" method="post" onsubmit="return check()">
-                <label> 
-                    Nom*:  <input type="text" id="lastname" name="lastname" required>
-                </label>
-                <label> 
-                    Prénom*:  <input type="text" id="firstname" name="firstname" required>
-                </label>
-                <label> 
-                    Date de Naissance:  <input type="text" id="birthdate" name="birthdate" form="dd/mm/yyyy" placeholder="dd/mm/yyyy" minlength="10" maxlength="10">
-                </label>
+            <form action="/login" method="post" onsubmit="return check()">
                 <label> 
                     Nom d'utilisateur*: <input type="text" id="username" name="username" required>
                 </label>
                 <label> 
                     Mot de passe*: <input type="password" id="userpwd" name="userpwd" minlength="12" required>
                 </label>
-                <label> 
-                    Mail*: <input type="email" id="email" name="	useremail" required>
-                </label>
-                
+
                 <input type="submit" value="SIGN UP">
             </form>
         </div>

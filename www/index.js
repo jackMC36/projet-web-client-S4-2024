@@ -27,6 +27,10 @@ function check_birthdate() {
     var year = birthdate.substring(6,10);
     var month = birthdate.substring(3,5);
     var day = birthdate.substring(0,2);
+    if (isNaN(year) || isNaN(month) || isNaN(day)) {
+        alert("La date de naissance doit être composée de chiffres");
+        return false;
+    }
 
     var date = new Date(year, month, day);
     var date_now = new Date();
