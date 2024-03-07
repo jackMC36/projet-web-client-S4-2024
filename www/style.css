@@ -7,6 +7,9 @@
   nav a:first-child {
     margin-left: 140px;
   }
+  nav a {
+    font-size: 8px;
+  }
   header :first-child {
     margin-left: 140px;
   }
@@ -19,6 +22,18 @@
   ul {
     text-align: left;
   }
+  body .boximage{
+    flex-direction: column;
+
+  }
+  
+  figure {
+    max-width: 275px;
+  }
+
+  table{
+    width: 500px;
+  }
 }
 
 @media (min-width: 600px) { 
@@ -27,6 +42,9 @@
   }
   nav a:first-child {
     margin-left: 150px;
+  }
+  nav a {
+    font-size: 12px;
   }
   header :first-child {
     margin-left: 170px;
@@ -37,6 +55,10 @@
   body .login-area {
     margin-left: 100px;
   }
+  table {
+    width: 700px;
+  
+  }
 }
 @media (min-width: 992px) { 
   body {
@@ -45,6 +67,9 @@
   nav a:first-child {
     margin-left: 200px;
   }
+  nav a {
+    font-size: 12px;
+  }
   header :first-child {
     margin-left: 170px;
   }
@@ -52,13 +77,24 @@
     justify-content: center;
   }
   body p {
-    margin-right: 0px;
+    margin-right: auto;
   }
   body .login-area {
     margin-left: auto;
   }
   ul {
     text-align: center;
+  }
+  body .boximage{
+    flex-direction: row;
+
+  }
+  
+  figure {
+    max-width: 275px;
+  }
+  table {
+    width: auto;
   }
 }
 
@@ -316,13 +352,7 @@ table {
     
   }
 
-.boximage figure {
-  transition: transform 0.3s ease-in-out;
-}
 
-.boximage figure:hover {
-  transform: scale(1.1);
-}
 
   .boxtab{
     display: flex;
@@ -346,22 +376,47 @@ table {
 
 .salameche{
   background-color: rgb(251, 186, 116);
+  transition: transform 0.3s ease-in-out;
+}
+
+.salameche:hover{
+  transform: scale(1.1);
 }
 
 .carapuce{
   background-color: rgb(152, 214, 214);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carapuce:hover{
+  transform: scale(1.1);
 }
 
 .bulbizarre{
   background-color: rgb(140, 247, 140);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bulbizarre:hover{
+  transform: scale(1.1);
 }
 
 .evoli{
   background-color: rgb(255, 255, 255);
+  transition: transform 0.3s ease-in-out;
+}
+
+.evoli:hover{
+  transform: scale(1.1);
 }
 
 .pikachu{
   background-color: rgb(234, 234, 92);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pikachu:hover{
+  transform: scale(1.1);
 }
 
 .manga{
@@ -370,6 +425,11 @@ table {
   height: 335px;
   margin: 10px;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.manga:hover{
+  transform: scale(1.1);
 }
 
 .mangaimg{
