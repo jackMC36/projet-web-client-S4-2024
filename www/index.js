@@ -3,11 +3,9 @@ function check_password() {
     var list_carac = ["_","-",";",":","!","?",".","/","*","&","$","@"];
     for(var i = 0; i < list_carac.length; i++){
         if(password.includes(list_carac[i])){
-            console.log("Le mot de passe est valide");
             return true;
         }
     }
-    alert("Le mot de passe doit contenir au moins un caractère spécial");
     return false;
 }
 
@@ -17,25 +15,21 @@ function check_birthdate() {
         return true;
     }
     if(birthdate[2] != "/"){
-        alert("Le format de la date de naissance doit être JJ/MM/AAAA");
         return false;
         }
     if(birthdate[5] != "/"){
-        alert("Le format de la date de naissance doit être JJ/MM/AAAA");
         return false;
         }
     var year = birthdate.substring(6,10);
     var month = birthdate.substring(3,5);
     var day = birthdate.substring(0,2);
     if (isNaN(year) || isNaN(month) || isNaN(day)) {
-        alert("La date de naissance doit être composée de chiffres");
         return false;
     }
 
     var date = new Date(year, month, day);
     var date_now = new Date();
     if(date > date_now){
-        alert("La date de naissance doit être inférieure à la date actuelle");
         return false;
     }
     return true;
@@ -46,16 +40,29 @@ function check_email(){
     if(email.includes("@") && email.includes(".")){
         return true;
     }
-    alert("L'adresse mail doit contenir un @ et un .");
     return false;
 }
 
 
 
-function check(){
+function check() {
     if(check_password() && check_birthdate() && check_email()){
-        return true;
-        console.log("Vous avez bien été enregistré");
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/htbin/register.py", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                console.log(this.responseText); 
+                document.body.innerHTML = this.responseText;
+            }
+        }
+        xhr.send("username=" + username + "&password=" + password);
+        return false;
     }
     return false;
 }
+
+
