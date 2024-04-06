@@ -8,12 +8,12 @@ import string
 import hashlib
 import pickle
 
-
 cgitb.enable()
 
 print('Cache-Control: no-cache')
-print('Content-type: text/plain; charset=utf-8')
+print('Content-type: application/xhtml+xml; charset=utf-8')
 print('')
+
 
 
 data_file = open('../data/user.dat','rb')
@@ -31,12 +31,18 @@ for name in list(form.keys()):
 		form_data[name] = form.getfirst(name)
 
 
-if not 'username' in form_data:
-	print('Le nom d\'utilisateur ne doit pas être vide.')
-elif not 'userpwd' in form_data:
-	print('Le mot de pass ne doit pas être vide.')
-elif form_data['username'] == data['username'] and form_data['userpwd'] == data['userpwd']:
-	print(("Bonjour %s %s !" % (data['firstname'], data['lastname'])))
-else:
-	print('Le nom d\'utilisateur et le mot de pass sont invalides.')
+#if not 'username' in form_data:
+#	print('Le nom d\'utilisateur ne doit pas être vide.')
+#elif not 'userpwd' in form_data:
+#	print('Le mot de pass ne doit pas être vide.')
+#elif form_data['username'] == data['username'] and form_data['userpwd'] == data['userpwd']:
+#	print(("Bonjour %s %s !" % (data['firstname'], data['lastname'])))
+#else:
+#	print('Le nom d\'utilisateur et le mot de pass sont invalides.') 
 
+if ('username' in form_data) & ('userpwd' in form_data):
+	template_file = open('../templates/login.xhtml','r')
+	template = string.Template(template_file.read())
+	template_file.close()
+	print((template.safe_substitute(data)))
+ 

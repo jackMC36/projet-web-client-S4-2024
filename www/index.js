@@ -59,10 +59,24 @@ function check() {
                 document.body.innerHTML = this.responseText;
             }
         }
-        xhr.send("username=" + username + "&password=" + password);
+        xhr.send("username=" + username + "&userpwd=" + password);
         return false;
     }
     return false;
 }
 
+function login(){
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/htbin/login.py", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            console.log(this.responseText); 
+            document.body.innerHTML = this.responseText;
+            } 
+        }
+    return false;
+}

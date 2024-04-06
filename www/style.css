@@ -1,20 +1,115 @@
 /*media querries*/
 
-@media (min-width: 400px) { 
+@media (min-width: 300px) { 
   body {
-    font-size: 10px;
+    font-size: 11px;
   }
   nav a:first-child {
-    margin-left: 140px;
+    margin-left: 20px; 
+  }
+  nav a {
+    font-size: 6px;
+  }
+  header :first-child {
+    margin-left: 20px;
+  }
+  header h1{
+    margin-top: 70px;
+  }
+  header img{
+    margin-top: 30px;
+  }
+  body p {
+    margin-right: 650px;
+  }
+  body .login-area {
+    margin-left: 10px;
+  }
+  ul {
+    text-align: left;
+  }
+  body .boximage{
+    flex-direction: column;
+
+  }
+  
+  figure {
+    max-width: 275px;
+  }
+
+  body table{
+    width: 350px;
+  }
+
+  h1{
+    font-size: 25px;
+  }
+  
+}
+
+
+@media (min-width: 400px) { 
+  body {
+    font-size: 11px;
+  }
+  nav a:first-child {
+    margin-left: 20px; 
   }
   nav a {
     font-size: 8px;
   }
   header :first-child {
+    margin-left: 40px;
+  }
+  header h1{
+    margin-top: 70px;
+  }
+  header img{
+    margin-top: 30px;
+  }
+  body p {
+    margin-right: 600px;
+  }
+  body .login-area {
+    margin-left: 30px;
+  }
+  ul {
+    text-align: left;
+  }
+  body .boximage{
+    flex-direction: column;
+
+  }
+  
+  figure {
+    max-width: 275px;
+  }
+
+  body table{
+    width: 400px;
+  }
+
+  h1{
+    font-size: 25px;
+  }
+
+}
+
+@media (min-width: 500px) { 
+  body {
+    font-size: 11px;
+  }
+  nav a:first-child {
+    margin-left: 140px;
+  }
+  nav a {
+    font-size: 6px;
+  }
+  header :first-child {
     margin-left: 140px;
   }
   body p {
-    margin-right: 520px;
+    margin-right: 420px;
   }
   body .login-area {
     margin-left: 100px;
@@ -32,7 +127,7 @@
   }
 
   body table{
-    width: 500px;
+    width: 570px;
   }
 
 }
@@ -45,13 +140,42 @@
     margin-left: 150px;
   }
   nav a {
-    font-size: 12px;
+    font-size: 10px;
   }
   header :first-child {
     margin-left: 170px;
   }
   body p {
     margin-right: 300px;
+  }
+  body .login-area {
+    margin-left: 100px;
+  }
+  body table {
+    width: 700px;
+  
+  }
+
+
+}
+
+
+
+@media (min-width: 700px) { 
+  body {
+    font-size: 12px;
+  }
+  nav a:first-child {
+    margin-left: 150px;
+  }
+  nav a {
+    font-size: 10px;
+  }
+  header :first-child {
+    margin-left: 170px;
+  }
+  body p {
+    margin-right: 200px;
   }
   body .login-area {
     margin-left: 100px;
@@ -242,12 +366,23 @@ nav{
     
 }
 
-nav a{
-    padding: 10px;
-    font-family: Pokemon Solid, Nunito, sans-serif, Verdana;
-    margin-right: 1px;
-    border-radius: 4px;
-    background-color: rgb(168, 204, 238);
+nav a {
+  padding: 10px;
+  font-family: Pokemon Solid, Nunito, sans-serif, Verdana;
+  margin-right: 1px;
+  border-radius: 4px;
+  background-color: rgb(168, 204, 238);
+  vertical-align: middle;
+}
+
+nav img {
+  width: 40px; 
+  height: 40px;
+  vertical-align: middle;
+}
+
+.nav-img {
+  display: none;
 }
 
 nav a:hover {
@@ -255,20 +390,18 @@ nav a:hover {
   color: black;
 }
 
-
 nav a.active {
   background-color: #0e89a7;
   color: rgb(0, 0, 0);
 }
 
-a{
-
-    background-color: rgb(212, 212, 212);
-    font-family: Nunito, sans-serif, Verdana;
-    border-collapse: collapse;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+a {
+  background-color: rgb(212, 212, 212);
+  font-family: Nunito, sans-serif, Verdana;
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .lien-externe{
